@@ -35,7 +35,7 @@ $portofolio = [
     ],
 
     [
-        "title" => "Pembangunan Ella Skin Care Cabang Magelang",
+        "title" => "Pembeangunan Ella Skin Care Cabang Magelang",
         "client" => "CV. Anugrah Dwimitra Sunjaya",
         "location" => "Jl. Kolonel Sugiyono No.7, Kemirirejo, Kecamatan Magelang Tengah, Kota Magelang, Jawa Tengah"
     ]
