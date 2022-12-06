@@ -1,6 +1,9 @@
 <?php
 
+use App\Http\Controllers\PostController;
+use App\Models\Post;
 use Illuminate\Support\Facades\Route;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -25,26 +28,7 @@ Route::get('/layanan', function () {
     ]);
 });
 
-Route::get('/portofolio', function () {
-    
-$portofolio = [
-    [
-        "title" => "Kegiatan Penataan Lahan Kritis",
-        "client" => "PT.Rumpun Sari Kemuning",
-        "location" => "Desa Ngargoyoso, Kecamatan Ngargoyoso, Kabupaten Karanganyar, Jawa Tengah"
-    ],
-
-    [
-        "title" => "Pembeangunan Ella Skin Care Cabang Magelang",
-        "client" => "CV. Anugrah Dwimitra Sunjaya",
-        "location" => "Jl. Kolonel Sugiyono No.7, Kemirirejo, Kecamatan Magelang Tengah, Kota Magelang, Jawa Tengah"
-    ]
-];
-    return view('portofolio', [
-        "title" => "Portofolio",
-        "contents" => $portofolio
-    ]);
-});
+Route::get('/portofolio', [PostController::class, 'index']);
 
 Route::get('/about', function () {
     return view('about', [
@@ -53,4 +37,8 @@ Route::get('/about', function () {
         "content" => "CV. Mandala Projects adalah sebuah perusahaan konsultan lingkungan yang sudah berdiri sejak 29 April 20015. CV Mandala Projects sendiri memiliki ruang lingkup pelayanan yang sesuai dengan Sertifikat Badan Usaha (SBU), di antaranya adalah Jasa Nasehat dan Konsultasi Rekayasa Teknik, Jasa Desain Rekayasa untuk Pekerjaan Teknik Sipil Transportasi, Jasa Nasehat dan Konsultasi Jasa Rekayasa Konstruksi, Jasa Desain Rekayasa Lainnya, Jasa Perencanaan dan Perancangan Perkotaan, Jasa Konsultasi Lingkungan.",
         "images" => "Who We Are.jpg"
     ]);
+});
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
 });
