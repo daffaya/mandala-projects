@@ -6,7 +6,7 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
             <style>
-                .nav-link {
+                .nav-item   {
                     color: black;
                 }
         
@@ -21,7 +21,7 @@
                     font-weight: bold;
                 }
             </style>
-        <ul class="navbar-nav mx-auto">
+        <ul class="navbar-nav mx-auto">l
           <li class="nav-item">
             <a class="nav-link {{ ($title === "Mandala Projects" ? 'active' : '') }}" href="/">Home</a>
           </li>
